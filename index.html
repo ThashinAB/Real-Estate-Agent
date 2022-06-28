@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Property</title> 
+    <!-- CSS --> 
+    <link rel="stylesheet" href="main.css"> 
+
+    <!-- Jquery-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="jquery.js"></script>
+
+    <!-- Content Security Poilicy -->
+    <meta http-equiv="Content-Security-Policy" content=" script-src 'self' ajax.googleapis.com 'unsafe-inline'; img-src *; style-src 'self' ajax.googleapis.com 'unsafe-inline'; style-src-elem 'self' ajax.googleapis.com fonts.googleapis.com; child-src 'self' www.google.com;">
+    
+
+</head>
+<body>
+
+    <!-- header section with background image -->
+    <header class="header">
+        <div class="backres1">
+                <nav  class="menu">
+                <a href="index.html"> <img src="images/logo3.png" alt="logo" width="100px" height="20px"></a>
+                </nav>
+            <div class="headerText">
+                <pre>T H E   B E S T   W A Y   T O</pre>
+                <h1>Find Your Perfect Home</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="searchBoxSection">
+
+        <div class="searchBox">
+
+                <h1>Find A Property</h1>
+
+            <label for="propertyType"> Property Type : </label>
+            <select name="propertyType" id="propertyType">
+                <option value="Flat">Flat</option>
+                <option value="House">House</option>
+                <option value="Any" >Any</option>
+            </select>
+
+            <br><br>
+
+            <div class="inline">
+            <label for="spinnerMin"> Minimum Bedrooms : </label>
+            <input id="spinnerMin" value="2">
+            <br><br>
+            <label for="spinnerMax"> Maximum Bedrooms : </label>
+            <input id="spinnerMax" value="2">
+            </div>
+
+            <br><br>
+            
+            <div class="Time">
+                <label for="time">Added to site : </label>
+                <select name="time" id="time">
+                <option value="January", "February"> January - February (2020)</option>
+                <option value="March", "April">March - April (2020)</option>
+                <option value="May", "June">May - June (2020)</option>
+                <option value="July", "August">July - August (2020)</option>
+                <option value="September", "October">September - October (2020)</option>
+                <option value="November", "December">November - December (2020)</option>
+                <option value="Anytime"> Anytime</option>   
+                </select>
+            </div> 
+            
+            
+            <p class="box">  
+            <label for="price">Price range : </label>
+            <input type="text" id="price" readonly class="goldSliderText">
+            </p>
+            <div id="slider-range"></div>
+                
+            <br><br>
+            
+            <button id="Search">Search</button> 
+            <br><br>
+
+        </div>
+    
+    </section>
+
+  <!-- Where results are shown when  searched -->
+    <section class="searchResult">
+        <div id="Placeholder"></div>
+    </section>  
+
+    <br><br>
+
+    
+    
+    <br><br>
+
+    <!-- properties added to favourites are shown below -->
+    <section class="favouriteSection">
+
+        <h3>Your Favourites.</h3>
+        <button class="viewFavourites">View Favourites</button>
+        <button class="clearFavourites">Clear All</button>
+        
+        <div id="Placeholder2"></div>
+
+    </section>
+
+    <!-- Drag and drop section below -->
+    <section class="dragAndDropSection">
+
+        <h3>Drag your favourite property here.</h3>
+
+        <br><br>
+        <div class="ui-widget ui-helper-clearfix">
+
+            <ul id="properties" class="properties ui-helper-reset ui-helper-clearfix">
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Petts Wood Road, Petts Wood, Orpington (£650000)</h5>
+                <img src="images/prop1pic1.jpg" alt="property" width="150" height="150">
+                <a href="properties/prop1.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Crofton Road Orpington BR6 (£299995)</h5>
+                <img src="images/prop1pic2.jpg" alt="property" width="150" height="150">
+                <a href="properties/prop2.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Assembly House, Bishopdale Court, Settle, North Yorkshire, BD24 (£220000)</h5>
+                <img src="images/prop1pic3.jpg" alt="property" width="150" height="150">
+                <a href="properties/prop3.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Eaves Lane, Stoke-On-Trent, ST2 (£254995)</h5>
+                <img src="images/prop1pic4.jpg" alt="property" width="150" height="150">
+                <a href="properties/prop4.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Caldon Quay, Stoke-On-Trent, ST1 (£105000)</h5>
+                <img src="images/prop1pic5.jpg" alt="Oproperty" width="150" height="150">
+                <a href="properties/prop5.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Tang Hall Lane, York, YO10 3SD (£400000)</h5>
+                <img src="images/prop2pic6.jpg" alt="property" width="150" height="150">
+                <a href="properties/prop6.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            <li class="ui-widget-content ui-corner-tr">
+                <h5>Bedford Road, Clapham (£380000)</h5>
+                <img src="images/prop2pic7.jpg" alt="property" width="150" height="150">
+                <a href="properties/prop7.html" title="View Property" class="ui-icon ui-icon-info" target="_blank">View Property</a>
+                <a href="link/to/favorite/script/when/we/have/js/off" title="Add to favorite" class="ui-icon ui-icon-heart">Favorite image</a>
+            </li>
+            
+            </ul>
+            
+            <div id="favorite" class="ui-widget-content ui-state-default">
+            <h4> Favorite Properties </h4>
+            </div>
+            
+        </div>
+    
+    </section>
+
+    <script>
+
+        var data = {
+        
+            "properties": [
+                {
+                    "id":"prop1",
+                    "type":"House",
+                    "bedrooms":3,
+                    "price":650000,
+                    "tenure":"Freehold",
+                    "description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+                    "location":"Petts Wood Road, Petts Wood, Orpington",
+                    "picture":"images/prop1pic1small.jpg",
+                    "url":"properties/prop1.html",
+                    "added": {
+                        "month":"January",
+                        "day":12,
+                        "year":2020
+                    }
+                },
+                {
+                    "id":"prop2",
+                    "type":"Flat",
+                    "bedrooms":2,
+                    "price":299995,
+                    "tenure":"Freehold",
+                    "description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+                    "location":"Crofton Road Orpington BR6",
+                    "picture":"images/prop1pic2small.jpg",
+                    "url":"properties/prop2.html",
+                    "added": {
+                        "month":"March",
+                        "day":14,
+                        "year":2020
+                    }
+                },
+                {
+                    "id":"prop3",
+                    "type":"House",
+                    "bedrooms":3,
+                    "price":220000,
+                    "tenure":"Freehold",
+                    "description":"A deceptively larger property than first meets the eye, situated in a quiet courtyard setting close to the centre of Settle. Finished to a good standard offering three bedroom accommodation. Internal inspection advised.<br> This three bedroom property is located just a stones through away from the centre of town. The property is finished to an excellent standard throughout. The accommodation in brief includes to the ground floor, entrance porch, an open plan dining kitchen with square archway through to the living area. The kitchen is fitted with a range of wall and base units including integrated fridge, electric oven and hob. To the first floor are three double bedrooms and house bathroom comprising shower over bath, pedestal wash hand basin and wc. The property benefits from gas central heating.<br> This property will appeal to people looking for the convenience of town living, but also desiring a period property. The property is suitable as a full time residence, investment or a holiday let...",
+                    "location":"Assembly House, Bishopdale Court, Settle, North Yorkshire, BD24",
+                    "picture":"images/prop1pic3small.jpg",
+                    "url":"properties/prop3.html",
+                    "added": {
+                        "month":"May",
+                        "day":25,
+                        "year":2020
+                    }
+                },
+                {
+                    "id":"prop4",
+                    "type":"House",
+                    "bedrooms":6,
+                    "price":254995,
+                    "tenure":"Freehold",
+                    "description":"This immaculate, thoughtfully-designed 2-story home invites comfort, and exudes contemporary elegance. With three bedrooms, generous living space and stylish finishes, you'll enjoy a perfect setting for relaxing and entertaining. Plenty of natural light flows throughout the home's airy layout. Other special highlights include dual controlled heating system, programmable on each floor and contemporary kitchen. The master bedroom has its own private en-suite. The first floor also has the main bathroom and ample storage space. You'll also love the convenience of your own double driveway and integral garage. ",
+                    "location":"Eaves Lane, Stoke-On-Trent, ST2",
+                    "picture":"images/prop1pic4small.jpg",
+                    "url":"properties/prop4.html",
+                    "added": {
+                        "month":"July",
+                        "day":30,
+                        "year":2018
+                    }
+                },
+                {
+                    "id":"prop5",
+                    "type":"House",
+                    "bedrooms":3,
+                    "price":105000,
+                    "tenure":"Freehold",
+                    "description":"This home is perfectly presented through out and offers a great modern living space with open plan living room and kitchen with modern fitted units. This is a great first time buy or investment opportunity. An absolutely wonderful apartment just waiting for you with fantastic far reaching views and over looking the canal. This delightful accommodation includes two bedrooms, en-suite bathroom and main bathroom and a spacious kitchen, lounge and dining area. The property also benefits from secure parking accessed via the ELECTRIC GATES Completely surrounded by amenities, Hanley town centre is a short distance away and is simply bursting with attractions, including high street shops, pubs, cafes and restaurants. Also adjacent to the apartments is a park ideal for any keen walkers or cyclists, Stoke train station is also a short distance away. ",
+                    "location":"Caldon Quay, Stoke-On-Trent, ST1",
+                    "picture":"images/prop1pic5small.jpg",
+                    "url":"properties/prop5.html",
+                    "added": {
+                        "month":"July",
+                        "day":21,
+                        "year":2020
+                    }
+                },
+                {
+                    "id":"prop6",
+                    "type":"Flat",
+                    "bedrooms":6,
+                    "price":400000,
+                    "tenure":"Freehold",
+                    "description":"Eddison White are delighted to offer for sale this exceptional 3 bedroom home that benefits from a rear extension. The property is immaculately presented mixing traditional and contemporary styling perfectly, from the sleek white lines of the kitchen and dining room to the hardwood floored reception room with fitted alcove cabinets and shutters which are a feature throughout. The bathroom is spacious and accommodates a separate bath and shower unit. The handleless kitchen units are top quartz worksurfaces and benefits from fully integrated appliances, through the double doors you have an 83' southerly aspect rear garden with paved patio leading to the lawn with a rear trellised area for storage and timber shed. To the first floor, you have two double bedrooms, the main room with built-in wardrobes and a 3rd bedroom is small but works ideally as a dressing room, cot room or home office. The loft has power and lights and could potentially be extended STPP. To the front, there is parking on the brick-paved driveway. ",
+                    "location":"Tang Hall Lane, York, YO10 3SD",
+                    "picture":"images/prop2pic6small.jpg",
+                    "url":"properties/prop6.html",
+                    "added": {
+                        "month":"September",
+                        "day":07,
+                        "year":2020
+                    }
+                },
+                {
+                    "id":"prop7",
+                    "type":"Flat",
+                    "bedrooms":2,
+                    "price":380000,
+                    "tenure":"Freehold",
+                    "description":"A beautifully presented one bedroom flat arranged over the first floor of this popular development just moments from Clapham North tube station and the amenities of Clapham High Street.<br>This stunning flat measures approximately 554 Sq ft and boasts one spacious double bedroom, a modern bathroom and an open plan reception room with stylish fitted kitchen. The property benefits from bike storage.",
+                    "location":"Bedford Road, Clapham",
+                    "picture":"images/prop2pic7small.jpg",
+                    "url":"properties/prop7.html",
+                    "added": {
+                        "month":"November",
+                        "day":16,
+                        "year":2020
+                    }
+                }
+            
+        ]}
+        </script>
+    
+</body>
+
+</html>
